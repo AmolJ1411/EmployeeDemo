@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "60eca8bd9c19817f0fd05ad6f6d302d0"
+build_time: [579158519, 990952000]
+inputs:
+  "/Users/tushar/Desktop/PlistDemo/PlistDemo/PlistDemo/ViewController.swift": [579158517, 0]
+  "/Users/tushar/Desktop/PlistDemo/PlistDemo/PlistDemo/AppDelegate.swift": [579155646, 0]
+  "/Users/tushar/Desktop/PlistDemo/PlistDemo/PlistDemo/EmployeeTableViewCell.swift": [579158347, 0]
