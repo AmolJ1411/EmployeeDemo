@@ -23,7 +23,7 @@ struct Employee {
     init(dict: [String: AnyObject]) {
         name = dict["name"] as! String
         mobileNumber = dict["mobileNumber"] as! String
-        isFavourite = (dict["isFavourite"] != nil)
+        isFavourite = dict["isFavourite"] as! Bool
     }
 }
 

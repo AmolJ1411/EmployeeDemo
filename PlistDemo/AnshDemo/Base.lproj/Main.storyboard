@@ -40,7 +40,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6eM-LK-aGM" id="rJc-Wz-HVy">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dw7-A5-ALT">
@@ -67,6 +67,9 @@
                                                         <constraint firstAttribute="height" constant="44" id="wef-Xv-ZYe"/>
                                                     </constraints>
                                                     <state key="normal" title="favorite"/>
+                                                    <connections>
+                                                        <action selector="actionFav:" destination="6eM-LK-aGM" eventType="touchUpInside" id="gbU-US-7GJ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -78,6 +81,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnButton" destination="DHa-ZP-Xv5" id="hNZ-0y-F3d"/>
                                             <outlet property="lblMob" destination="Ids-sH-M7E" id="gH2-Gx-Uas"/>
                                             <outlet property="lblName" destination="95W-gz-5P4" id="dPZ-3e-82V"/>
                                         </connections>

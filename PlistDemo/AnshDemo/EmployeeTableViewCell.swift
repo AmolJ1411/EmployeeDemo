@@ -16,12 +16,14 @@ class EmployeeTableViewCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblMob: UILabel!
     
+    @IBOutlet weak var btnButton: UIButton!
     
     var employee: Employee? {
         
         didSet{
             lblName.text = employee?.name
             lblMob.text = employee?.mobileNumber
+            setTitle()
         }
     }
     
@@ -29,7 +31,21 @@ class EmployeeTableViewCell: UITableViewCell {
     
     
     @IBAction func actionFav(_ sender: Any) {
+        employee!.isFavourite = !employee!.isFavourite
+        setTitle()
         delegate?.didSelectfav(employee: employee)
+    }
+    
+    func setTitle() {
+        guard employee != nil else {
+            return
+        }
+
+        if employee!.isFavourite {
+            btnButton.setTitle("Favorite", for: .normal)
+        }else {
+            btnButton.setTitle("Mark favorite", for: .normal)
+        }
     }
     
 }

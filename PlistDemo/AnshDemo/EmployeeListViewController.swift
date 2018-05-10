@@ -37,17 +37,17 @@ class EmployeeListViewController: UIViewController {
     
     @IBAction func segmentChanged(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            filterDataSource(byFav: false)
+            arrEmployee = dataModel.getEmployeeList()
         }else {
-            filterDataSource(byFav: true)
+            filterDataSource()
         }
+        tblEmplyoee.reloadData()
     }
     
-    func filterDataSource(byFav isFavourte: Bool) {
+    func filterDataSource() {
        arrEmployee = arrEmployee.filter { (employee) -> Bool in
             return employee.isFavourite
         }
-        tblEmplyoee.reloadData()
     }
 
 }
